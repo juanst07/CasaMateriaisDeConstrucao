@@ -6,15 +6,15 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #fafafa;
+  color: #2c2c2c;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #004080;
-  color: white;
+  background-color: #123456; /* Sua cor principal */
+  color: #f9f9f9;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,7 @@ header nav ul {
   gap: 15px;
 }
 header nav ul li a {
-  color: white;
+  color: #f9f9f9;
   text-decoration: none;
   font-weight: 500;
 }
@@ -40,29 +40,41 @@ header nav ul li a:hover {
 
 /* Banner */
 .banner {
-  background: url('https://source.unsplash.com/1600x400/?construction,materials') no-repeat center center;
-  background-size: cover;
-  color: white;
+  background: linear-gradient(120deg, #1a5d2b 60%, #b7e4c7 100%);
+  color: #fff;
+  padding: 60px 0 50px 0;
   text-align: center;
-  padding: 80px 20px;
 }
 .banner h1 {
   font-size: 2.5rem;
+  margin-bottom: 18px;
+}
+.banner h1 span {
+  color: #b7e4c7;
+  font-weight: bold;
 }
 .banner p {
   font-size: 1.2rem;
-  margin: 15px 0;
+  margin-bottom: 28px;
 }
 .btn {
-  background-color: #ff9900;
-  color: white;
-  padding: 10px 25px;
-  text-decoration: none;
+  background: #ff6600; /* Cor do botão */
+  color: #fff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
   font-weight: bold;
-  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
-.btn:hover {
-  background-color: #e68a00;
+.btn:hover, .btn.destaque:hover {
+  background: #26734d;
+}
+.btn.destaque {
+  background: #1a5d2b;
+  margin-top: 10px;
 }
 
 /* Seções padrão */
@@ -72,33 +84,62 @@ main, .container {
 h2 {
   margin-bottom: 15px;
   font-size: 1.8rem;
+  color: #333;
 }
 
 /* Produtos */
 .produto {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  background: white;
-  width: 250px;
-  margin: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
 }
 .produto h3 {
   font-size: 1.2rem;
+  color: #222;
 }
 .produto p {
   margin: 10px 0;
+  color: #555;
 }
 .produtos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.produto-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Botão de comprar */
+.produto button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+.produto button:hover {
+  background: #218838;
 }
 
 /* Carrinho */
 .carrinho-item {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
 .carrinho-item:last-child {
@@ -107,8 +148,247 @@ h2 {
 
 /* Rodapé */
 footer {
-  background-color: #eee;
+  background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
   margin-top: 40px;
+  color: #666;
+}
+
+/* Seções principais */
+.sobre-empresa, .vagas, .envio-curriculo {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 24px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* Títulos das seções */
+.sobre-empresa h3, .vagas h3, .envio-curriculo h3 {
+  color: #1a5d2b;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+/* Parágrafos */
+.sobre-empresa p, .vagas p, .envio-curriculo p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Lista de vagas */
+.vagas ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.vagas li {
+  margin-bottom: 6px;
+  color: #2d6a4f;
+  font-weight: 500;
+}
+
+/* Formulário de currículo */
+.form-curriculo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.form-curriculo label {
+  font-weight: 500;
+  color: #1a5d2b;
+}
+
+.form-curriculo input,
+.form-curriculo textarea {
+  padding: 8px 10px;
+  border: 1px solid #b7e4c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.form-curriculo input:focus,
+.form-curriculo textarea:focus {
+  border: 1.5px solid #40916c;
+  outline: none;
+}
+
+.form-curriculo button {
+  background: #40916c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.form-curriculo button:hover {
+  background: #26734d;
+}
+
+/* Estilo para a seção da história */
+.historia-max {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 32px 28px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 32px;
+}
+
+.historia-max h2 {
+  color: #1a5d2b;
+  margin-bottom: 18px;
+  font-size: 2rem;
+}
+
+.historia-max p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 14px;
+  font-size: 1.08rem;
+}
+
+.historia-max ul {
+  margin: 10px 0 10px 20px;
+  padding-left: 0;
+}
+
+.historia-max li {
+  color: #2d6a4f;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* Vantagens */
+.vantagens {
+  background: #f8f9fa;
+  padding: 40px 0 30px 0;
+  text-align: center;
+}
+.vantagens h2 {
+  color: #1a5d2b;
+  margin-bottom: 32px;
+  font-size: 2rem;
+}
+.vantagens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.vantagem {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 18px 22px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vantagem img {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 14px;
+}
+.vantagem h3 {
+  color: #40916c;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+.vantagem p {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Chamada final */
+.chamada {
+  background: #e9f5ee;
+  text-align: center;
+  padding: 38px 0 32px 0;
+}
+.chamada h2 {
+  color: #1a5d2b;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+.chamada p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+/* Depoimentos */
+.depoimentos {
+  background: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+.depoimentos-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.depoimento {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 24px 18px;
+  max-width: 320px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.depoimento span {
+  display: block;
+  margin-top: 12px;
+  color: #40916c;
+  font-weight: bold;
+}
+
+/* Grid de vantagens customizado */
+.custom-vantagens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 950px;
+  margin: 0 auto;
+  position: relative;
+}
+.custom-vantagens-grid .preco-justo {
+  grid-column: 2 / 3;
+  margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .custom-vantagens-grid {
+    grid-template-columns: 1fr;
+  }
+  .custom-vantagens-grid .preco-justo {
+    grid-column: auto;
+    margin-top: 0;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .banner-content h1 { font-size: 1.5rem; }
+  .vantagens-grid { grid-template-columns: 1fr; }
+  .vantagem { padding: 18px 8px; }
+}
+
+.banner-img {
+  max-width: 320px;
+  width: 90%;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
