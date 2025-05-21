@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato - Construtora Max</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Construtora Max</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="nossa-historia.html">Nossa História</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="carrinho.html">🛒 Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Contato</h2>
+    <form id="form-contato" onsubmit="return validarFormulario()">
+      <label for="nome">Nome:</label><br/>
+      <input type="text" id="nome" name="nome" required /><br/><br/>
+
+      <label for="email">Email:</label><br/>
+      <input type="email" id="email" name="email" required /><br/><br/>
+
+      <label for="mensagem">Mensagem:</label><br/>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br/><br/>
+
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Construtora Max. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function validarFormulario() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !email || !mensagem) {
+        alert('Por favor, preencha todos os campos.');
+        return false;
+      }
+      alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      document.getElementById('form-contato').reset();
+      return false; // para evitar reload, pois não há backend
+    }
+  </script>
+</body>
+</html>

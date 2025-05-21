@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrinho de Compras - Construtora Max</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body onload="exibirCarrinho()">
+  <header>
+    <div class="logo">Construtora Max</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="nossa-historia.html">Nossa História</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="carrinho.html">🛒 Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Seu Carrinho</h2>
+    <div id="carrinho-itens"></div>
+    <h3 id="total"></h3>
+    <button class="btn" onclick="limparCarrinho()">Esvaziar Carrinho</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Construtora Max. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

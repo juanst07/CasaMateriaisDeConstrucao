@@ -1,0 +1,114 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #004080;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  background: url('https://source.unsplash.com/1600x400/?construction,materials') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.banner h1 {
+  font-size: 2.5rem;
+}
+.banner p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+.btn {
+  background-color: #ff9900;
+  color: white;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color: #e68a00;
+}
+
+/* Seções padrão */
+main, .container {
+  padding: 30px 40px;
+}
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* Produtos */
+.produto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: white;
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+}
+.produto h3 {
+  font-size: 1.2rem;
+}
+.produto p {
+  margin: 10px 0;
+}
+.produtos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Carrinho */
+.carrinho-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.carrinho-item:last-child {
+  border-bottom: none;
+}
+
+/* Rodapé */
+footer {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}

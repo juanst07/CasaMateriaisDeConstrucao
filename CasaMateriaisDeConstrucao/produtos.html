@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Produtos - Construtora Max</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">Construtora Max</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="nossa-historia.html">Nossa História</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="carreiras.html">Carreiras</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="carrinho.html">🛒 Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Produtos</h2>
+    <div class="produtos-grid">
+      <div class="produto">
+        <h3>Cimento CP II</h3>
+        <p>R$ 38,90</p>
+        <button onclick="adicionarAoCarrinho('Cimento CP II', 38.90)">Comprar</button>
+      </div>
+      <div class="produto">
+        <h3>Areia Lavada (m³)</h3>
+        <p>R$ 120,00</p>
+        <button onclick="adicionarAoCarrinho('Areia Lavada', 120.00)">Comprar</button>
+      </div>
+      <div class="produto">
+        <h3>Tijolo Baiano</h3>
+        <p>R$ 1,50</p>
+        <button onclick="adicionarAoCarrinho('Tijolo Baiano', 1.50)">Comprar</button>
+      </div>
+      <div class="produto">
+        <h3>Telha Cerâmica</h3>
+        <p>R$ 5,00</p>
+        <button onclick="adicionarAoCarrinho('Telha Cerâmica', 5.00)">Comprar</button>
+      </div>
+      <div class="produto">
+        <h3>Fio Elétrico 2,5mm</h3>
+        <p>R$ 120,00</p>
+        <button onclick="adicionarAoCarrinho('Fio Elétrico 2,5mm', 120.00)">Comprar</button>
+      </div>
+      <div class="produto">
+        <h3>Tinta Acrílica 18L</h3>
+        <p>R$ 210,00</p>
+        <button onclick="adicionarAoCarrinho('Tinta Acrílica 18L', 210.00)">Comprar</button>
+      </div>
+      <!-- Você pode adicionar mais produtos seguindo o mesmo padrão -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Construtora Max. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
